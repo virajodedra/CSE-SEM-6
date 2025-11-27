@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        * * * * *
+          * * * *
+            * * *
+              * *
+                *
+    -->
+
+    <!-- 
+    not working....
+    let n = parseInt(prompt(" Enter the size of the pattern : "));
+
+            for( let i = 1; i <= n; i++ ) {
+                for( let k = 1; k <= i; k ++ ) {
+                    document.write(" ");
+                }
+                for( let j = n; j >= i; j-- ) {
+                    document.writeln("*");
+                }
+
+                document.write("<br>");
+
+            }
+    
+
+    -->
+
+    <script>
+
+        let rows = parseInt(prompt(" Enter the number of rows : "));
+
+        for( let i = rows; i >= 1; i-- ) {
+            let pattern = "";
+            // spaces
+            for( let j = 1; j <= rows - i; j++ ) {
+                pattern += "  ";
+            }
+            // stars
+            for( let k = 1; k <= i; k++ ) {
+                pattern += "* ";
+            }
+            console.log(pattern);
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
