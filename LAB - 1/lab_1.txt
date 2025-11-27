@@ -1,0 +1,64 @@
+﻿
+	LAB : 1
+PART – A :
+
+
+PWD :  present working directory.
+
+
+
+LS : give the list of the directories. 
+
+
+
+ 
+clear : to clear the terminal.
+
+
+Mkdir  folder_name  :  to make the directory
+
+
+
+
+to get the help for any command use :
+
+	command_name –help
+
+cal : to get the calender of the current month
+date : to get the today’s date
+
+cat :
+	> is used for the redirection if file no found make a new one.and you can give the content of it. Old content is overwrite by new content.
+
+
+Echo :
+
+	to print in terminal
+
+>> : create new file(redirection) and append the data given by the command
+formatin date commands :
+
+PART – B :
+question – 2 :
+
+
+normal commands to know :
+cd /  : to goto root
+cd .. : to go one level up
+cd path : to go to the specific path
+
+
+question – 1:
+
+
+
+
+
+
+question – 3
+
+
+
+
+
+
