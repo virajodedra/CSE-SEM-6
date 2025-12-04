@@ -1,0 +1,9 @@
+Name		Gender		Age
+Viraj		Male		21
+Harshil		Male		22
+Dhairya		Male		23
+Malay		Male		37
+Jasmin		Male		21
+Meet		Male		21
+Meet		Male		20
+Kalp		Male		24
