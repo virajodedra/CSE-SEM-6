@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JS Handled Mouse Events and Keyboard Events
+        
+    a. js gives the key code for the key pressed on the keyboard.
+    b. if the key pressed is "a, e ,i, o, u" then script should announce that vowel is pressed
+    c. key is released bg change
+    
+    </title>
+</head>
+<body>
+
+    <input type="text" id="input" onchange="changeKeyboard(event)" placeholder="Enter the text here"> 
+
+    <script>
+
+        let keyboard = document.getElementById("input");
+        keyboard.addEventListener('keydown', (event) => {
+            const keyname = event.key;
+            console.log(" The key pressed is : " + keyname + " and its key code is : " + event.keyCode );
+
+            let arr = ['a', 'e', 'i', 'o', 'u'];
+
+            if(arr.includes(keyname)) {
+                console.log(" Vowel " + keyname + " is pressed ");
+            }
+        }, false);
+
+         keyboard.addEventListener("keyup", function() {
+            document.body.style.background = "yellow";
+        });
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Recognition of Mouse Event </title>
+</head>
+<body>
+    <button
+        onclick = "eventOccur(event)"
+        ondblclick = "eventOccur(event)"
+        onmouseover = "eventOccur(event)"
+
+    >
+        Click Me !
+    </button>
+
+    <script>
+
+        //let click = document.querySelector("button");
+
+        //let leftclick = click.addEventListener("click", (Event) => {
+          //  Event.preventDefault();
+            //document.write(" Left Click Event Recognized ! <br>");
+        //}, false);
+
+        function eventOccur(event) {
+            console.log( event.type + " Event Recognized !" );
+        }
+        
+
+
+    </script>
+    
+</body>
+</html>

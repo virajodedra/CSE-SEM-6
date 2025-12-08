@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="checkbox" value="101" onclick="showSelected()">101<br>
+<input type="checkbox" value="102" onclick="showSelected()">102<br>
+<input type="checkbox" value="103" onclick="showSelected()">103<br>
+
+<p>Selected: <span id="result"></span></p>
+
+<script>
+function showSelected() {
+    let boxes = document.querySelectorAll('input[type=checkbox]');
+    let selected = [];
+
+    boxes.forEach(b => {
+        if (b.checked) selected.push(b.value);
+    });
+
+    document.getElementById('result').textContent = selected.join(", ");
+}
+</script>
+
+</body>
+</html>

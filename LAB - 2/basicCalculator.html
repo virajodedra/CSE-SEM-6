@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+<body>
+
+    <h2>Basic Calculator</h2>
+
+    <label>Number 1:</label>
+    <input type="number" id="num1" placeholder="Enter The First Value"><br><br>
+
+    <button style="background-color: rgba(245, 0, 0, 0.5);" onclick="add()">Add</button>
+    <button style="background-color: rgba(0, 245, 0, 0.5);" onclick="sub()">Subtract</button>
+    <button style="background-color: rgba(245, 0, 245, 0.5);" onclick="mul()">Multiply</button>
+    <button style="background-color: rgba(245, 245, 245, 0.5);" onclick="div()">Divide</button>
+<br><br>
+
+    <label>Number 2:</label>
+    <input type="number" id="num2" placeholder="Enter The Second Value"><br><br>
+
+    
+    <h3>Result: <span id="result">--</span></h3>
+
+    <script>
+        function add() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerText = a + b;
+        }
+
+        function sub() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerText = a - b;
+        }
+
+        function mul() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerText = a * b;
+        }
+
+        function div() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            if (b === 0) {
+                alert("Cannot divide by zero!");
+                return;
+            }
+
+            document.getElementById("result").innerText = a / b;
+        }
+    </script>
+
+</body>
+</html>

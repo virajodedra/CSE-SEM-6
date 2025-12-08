@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+
+    <style>
+        .calc {
+            width: 260px;
+            padding: 15px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 90%;
+            font-size: 20px;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 50px;
+            height: 40px;
+            margin: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Scientific Calculator</h2>
+
+    <div class="calc">
+        <input type="text" id="display" disabled placeholder="Enter The Values">
+
+        <button onclick="addToDisplay('1')">1</button>
+        <button onclick="addToDisplay('2')">2</button>
+        <button onclick="addToDisplay('3')">3</button>
+        <button onclick="operate('+')">+</button>
+
+        <button onclick="addToDisplay('4')">4</button>
+        <button onclick="addToDisplay('5')">5</button>
+        <button onclick="addToDisplay('6')">6</button>
+        <button onclick="operate('-')">-</button>
+
+        <button onclick="addToDisplay('7')">7</button>
+        <button onclick="addToDisplay('8')">8</button>
+        <button onclick="addToDisplay('9')">9</button>
+        <button onclick="operate('*')">*</button>
+
+        <button onclick="addToDisplay('0')">0</button>
+        <button onclick="addToDisplay('.')">.</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="operate('/')">/</button>
+        <button onclick="scientific('sin')">sin</button>
+        <button onclick="scientific('cos')">cos</button>
+        <button onclick="scientific('tan')">tan</button>
+        <button onclick="scientific('sqrt')">Square</button>
+
+        <button onclick="scientific('log')">log</button>
+        <button onclick="operate('^')">power</button>
+        <button onclick="calculate()">=</button>
+    </div>
+
+    <script>
+        let display = document.getElementById("display");
+        let operator = "";
+        let num1 = 0;
+
+        function addToDisplay(val) {
+            display.value += val;
+        }
+
+        function clearDisplay() {
+            display.value = "";
+            num1 = 0;
+            operator = "";
+        }
+
+        function operate(op) {
+            num1 = Number(display.value);
+            operator = op;
+            display.value = "";
+        }
+
+        function scientific(func) {
+            let num = Number(display.value);
+
+            if (func === "sin") display.value = Math.sin(num);
+            if (func === "cos") display.value = Math.cos(num);
+            if (func === "tan") display.value = Math.tan(num);
+            if (func === "sqrt") display.value = Math.sqrt(num);
+            if (func === "log") display.value = Math.log10(num);
+        }
+
+        function calculate() {
+            let num2 = Number(display.value);
+            let result = 0;
+
+            if (operator === "+") result = num1 + num2;
+            if (operator === "-") result = num1 - num2;
+            if (operator === "*") result = num1 * num2;
+            if (operator === "/") result = num1 / num2;
+            if (operator === "^") result = Math.pow(num1, num2);
+
+            display.value = result;
+        }
+    </script>
+
+</body>
+</html>

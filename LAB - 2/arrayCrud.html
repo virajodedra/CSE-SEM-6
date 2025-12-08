@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD using the Array</title>
+</head>
+<body>
+
+    <input type="text" id="name" placeholder="Add Your Name here">
+    <button onclick="addValue()"> Add name </button>
+    <button onclick="deleteName()"> Delete name </button>
+    
+    <h5 id="result"></h5>
+
+    <input type="text" id="edit" placeholder="Enter the Updating id here :">
+    <button onclick="editName()"> Edit Name </button>
+
+    <script>
+        let names = [];
+
+        function addValue() {
+            let val = document.getElementById('name').value;
+            document.getElementById('name').value = "";
+            names.push(val);
+
+            console.log(names);
+            showNames();
+        }
+
+        function editName() {
+            let val = document.getElementById('name').value;
+            let idx = document.getElementById('edit').value;
+            document.getElementById('name').value = "";
+            
+            names[idx] = val;
+
+            console.log(names);
+            showNames();
+        }
+
+        function deleteName() {
+            let idx = parseInt(document.getElementById('name').value);
+            document.getElementById('name').value = "";
+            
+            names.splice(idx, 1);
+
+            console.log(names);
+            showNames();
+        }
+
+        function showNames() {
+            document.getElementById("result").innerText = `Names: [ ${names.join(", ")} ]`;
+        }
+
+
+    </script>
+    
+</body>
+</html>
+
+<!-- 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Name CRUD App</title>
+</head>
+<body>
+
+    <h2>Name Management (HTML + JS)</h2>
+
+    <input type="text" id="addInput" placeholder="Enter name">
+    <button onclick="addName()">Add Name</button>
+
+    <br><br>
+
+    <input type="text" id="oldName" placeholder="Old Name">
+    <input type="text" id="newName" placeholder="New Name">
+    <button onclick="updateName()">Update Name</button>
+
+    <br><br>
+
+    <input type="text" id="deleteName" placeholder="Name to delete">
+    <button onclick="deleteName()">Delete Name</button>
+
+    <br><br>
+
+    <button onclick="showNames()">Show All Names</button>
+
+    <p id="output"></p>
+
+    <script>
+        let arr = [];
+
+        // ADD NAME
+        function addName() {
+            let name = document.getElementById("addInput").value.trim();
+
+            if (name === "") return alert("Enter a valid name!");
+
+            arr.push(name);
+            document.getElementById("output").innerText = `"${name}" added to the list.`;
+        }
+
+        // UPDATE NAME
+        function updateName() {
+            let oldN = document.getElementById("oldName").value.trim();
+            let newN = document.getElementById("newName").value.trim();
+
+            if (oldN === "" || newN === "") return alert("Enter both names!");
+
+            let index = arr.indexOf(oldN);
+
+            if (index === -1) {
+                return document.getElementById("output").innerText = `"${oldN}" not found.`;
+            }
+
+            arr[index] = newN;
+            document.getElementById("output").innerText = `"${oldN}" updated to "${newN}".`;
+        }
+
+        // DELETE NAME
+        function deleteName() {
+            let name = document.getElementById("deleteName").value.trim();
+
+            if (name === "") return alert("Enter a name!");
+
+            let index = arr.indexOf(name);
+
+            if (index === -1) {
+                return document.getElementById("output").innerText = `"${name}" not found.`;
+            }
+
+            arr.splice(index, 1);
+            document.getElementById("output").innerText = `"${name}" removed from the list.`;
+        }
+
+        // SHOW ARRAY
+        function showNames() {
+            document.getElementById("output").innerText = `Names: [ ${arr.join(", ")} ]`;
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+-->

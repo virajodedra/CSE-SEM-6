@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Write a JavaScript having a list of checkbox and by clicking on checkbox, it should 
+show list of selected value in comma separated format. (e.g. list of roll number 
+as checkbox value, and display selected roll number in comma separated 
+format) (C) -->
+
+    <style>
+        body {
+        background-color: #212121;
+        color: white;
+    }
+    </style>
+
+</head>
+<body>
+
+
+    <div id="main"> 
+        <table>
+            <tr>
+                <th>Select Roll Numbers</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="roll" value="101"> 101 <br>
+                    <input type="checkbox" class="roll" value="102"> 102 <br>
+                    <input type="checkbox" class="roll" value="103"> 103 <br>
+                    <input type="checkbox" class="roll" value="104"> 104 <br>
+                    <input type="checkbox" class="roll" value="105"> 105 <br>
+                    <input type="checkbox" class="roll" value="106"> 106 <br>
+                    <input type="checkbox" class="roll" value="107"> 107 <br>
+                    <input type="checkbox" class="roll" value="108"> 108 <br>
+                    <input type="checkbox" class="roll" value="109"> 109 <br>
+                    <input type="checkbox" class="roll" value="110"> 110 <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="showSelected()"> Show Selected Roll Numbers </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="selectedValues"></p>
+                </td>
+            </tr>
+
+            <script>
+                function showSelected() {
+                    let selected = [];
+                    let checkboxes = document.getElementsByClassName('roll');
+                    for( let checkbox of checkboxes ) {
+                        if( checkbox.checked ) {
+                            selected.push(checkbox.value);
+                        }
+                    }
+                    document.getElementById('selectedValues').innerHTML = " Selected Roll Numbers : " + selected.join(', ');
+                }
+            </script>
+        </table>
+    </div>
+    
+</body>
+</html>
