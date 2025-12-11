@@ -1,0 +1,8 @@
+antina
+buyer
+cat
+dog
+ear
+fly
+goat
+hello

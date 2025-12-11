@@ -1,0 +1,8 @@
+this is the normal file.
+
+the name of the file is file2
+
+this  is the text file but this is file2.
+
+
+file is not file but this is the text file 2.
