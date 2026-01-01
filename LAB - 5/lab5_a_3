@@ -1,0 +1,19 @@
+:'
+    
+    To check whether given no is ODD or EVEN. 
+
+'
+
+#!/bin/bash
+
+read -p "Enter a number: " num
+
+if [ $((num % 2)) -eq 0 ]
+then
+    echo "The number is EVEN"
+elif [ $((num % 2)) -ne 0 ]
+then
+    echo "The number is ODD"
+fi
+
+
