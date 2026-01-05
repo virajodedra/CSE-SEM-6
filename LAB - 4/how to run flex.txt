@@ -1,0 +1,5 @@
+flex file_name
+
+gcc lex.yy.c
+
+a.exe now give the  data to  file  and  done.

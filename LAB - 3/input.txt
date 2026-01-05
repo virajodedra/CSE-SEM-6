@@ -1,0 +1,17 @@
+// this is the comment
+/*
+
+this is the multiline comment. 
+
+
+*/
+
+void main() {
+    int v;
+    v = 4;
+
+    let divider = 4;
+
+    printf("%d", v / divider);
+
+}

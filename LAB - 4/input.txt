@@ -1,0 +1,38 @@
+this is the demo file for flex 
+
+
+
+
+
+
+here  we are gone count  the number of  words
+
+
+number of  characters and the 
+
+number of lines 
+
+
+
+
+
+
+asdf
+as
+df
+f
+sf
+as
+fd
+af
+f
+afds
+f
+af
+
+
+malay
+kalp
+viraj
+man
+krish
