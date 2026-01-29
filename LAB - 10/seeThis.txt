@@ -1,0 +1,16 @@
+:'
+
+    Syntax of the for loop :-
+
+    for (( i=0; i<5; i++))
+    do
+        echo "$i"
+    done
+
+    for var in list_of_items; do
+        #logic
+    done
+
+
+    quesiton :- To find the value of one number raised to the power of another.
+'
